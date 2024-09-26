@@ -1,0 +1,5 @@
+# Ignore build data
+public
+
+# MacOS specific files
+.DS_Store

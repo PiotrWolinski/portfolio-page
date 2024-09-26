@@ -1,0 +1,320 @@
+baseURL: "https://example.org"
+languageCode: "en-us"
+title: "Piotr Wolinski"
+theme: hugo-profile-custom
+
+Paginate: 3
+googleAnalytics: G-123456789
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true  
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+params:
+  title: "Personal portfolio"
+  description: Simple portfolio site to get to know Hugo SSG
+  favicon: /images/favicon.png
+  # staticPath: ""  # The path to serve the static files from
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  math: true
+
+  theme:
+    disableThemeToggle: false
+    defaultTheme: "dark"
+
+  # font:
+  #   fontSize: 1.5rem # default: 1rem
+  #   fontWeight: 500 # default: 400
+  #   lineHeight: 1 # default: 1.5
+  #   textAlign: right # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  # navbar:
+  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+  #   brandName: "Profile" # Brand name for the brand | default is the title variable
+
+  #   menus:
+  #     disableAbout: true
+  #     disableExperience: true
+  #     disableEducation: true
+  #     disableProjects: true
+  #     disableAchievements: true
+  #     disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Nice to see you, my name is"
+    title: "Piotr."
+    subtitleHigher: "Software Engineer"
+    subtitleLower: "" # "CS student"
+    content: | 
+      Welcome to my portfolio site and please take a look around.  
+      If you want to, reach out to me via LinkedIn.
+    image: /images/linkedin-photo.jpg
+    button:
+      enable: true
+      name: "Resume"
+      url: "https://orange-danielle-93.tiiny.site/"
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/PiotrWolinski
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/piotr-wolinski/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    content: |-
+      Just a young engineer passionate about new technologies and self-development, with the deep belief that through hard work, one can achieve anything. In my work, I like to pay attention to details and deliver high-quality solutions using my current knowledge, but also one acquired specifically to address given tasks.
+        
+      In my work, I love to encounter new people, as well as new opportunities to test myself, regardless of whether it comes down to solving unknown issues or delving into never-met-before technology. Moreover, I'm a lifelong learner who can effortlessly adapt to changes.
+    skills:
+      enable: false
+      title: "My technology stack:"
+      items:
+        - "Python"
+        - "Docker"
+        - "C++"
+        - "JavaScript"
+        - "Vue"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "Verity AG"
+        positions:
+          - job: "Software Engineer"
+            company: "Verity AG"
+            companyUrl: "https://verity.net/"
+            date: "August 2023 - June 2024"
+            content: |
+              I'm working part time as a SE at Verity, where I put my Python expertise in use.
+
+      - company: "Deeptale AI"
+        positions:
+          - job: "Junior Machine Learning Engineer"
+            company: "Deeptale.ai"
+            companyUrl: "https://deeptale.ai/"
+            date: "February 2023 - May 2023"
+            content: |
+              As a part of a development team I am mostly focused on developing microservices and APIs linking various components of Deeptale infrastructure. Also I was the main developer of the QA Platform which main goal was to enhance graphics team performance by adding user friendly interface and well-optimized REST API endpoints.
+
+              Main achievements:
+              - Developed QA web application that had a significant impact on the performance of the graphics team
+              - Proposed & implemented architecture for microservices
+              - Improved API design and configurability
+
+              Tech stack:
+              - Python (FastAPI, Pydantic, Celery, poetry)
+              - Docker & Docker Compose
+              - Google Cloud Platform
+              - Vue, JavaScript
+              - Make
+
+              Other skills:
+              - REST API design
+              - Data structures
+              - Algorithms
+              - Machine Learning
+              - Taking ownership
+
+      - company: "STX Next"
+        positions:
+          - job: "Python Developer"
+            company: "STX Next"
+            companyUrl: "https://www.stxnext.com/"
+            date: "July 2022 - January 2023"
+            content: |
+              During my time in STX I had the opportunity to work in two separate areas:
+
+              Data Engineering:
+
+              While working with data processing involving ETL pipelines, I managed to fix an inconsistency in one of the client's datasets by firstly gathering, transforming and analysing necessary data and then preparing and running loaders to make it live. 
+
+              Development of internal management app:
+
+              Worked together with a team of backend and frontend developers on enhancing user experience and implementing requested features. This involved bug fixes, adding new features and improving existing ones (ie. extending Google calendar integration). Tech stack consisted of Django, Pyramid, SQLAlchemy and Docker. My greatest achievement was that users could use internal systems more efficiently and without any additional stress.
+                
+              Technology stack:
+              - Python (pandas, plotly, Django, Pyramid, SQLAlchemy)
+              - Docker & Docker Compose
+              - Jupyter
+              
+
+
+      - company: "Intel"
+        positions:
+          - job: "Deep Learning Software Engineer Intern"
+            company: "Intel"
+            companyUrl: "https://www.intel.com/content/www/us/en/homepage.html"
+            date: "October 2021 - June 2022"
+            featuredLink:
+              enable: true
+              name: "Project I was working on"
+              url: "https://mxnet.apache.org/"
+            info:
+              enable: true
+              content: Later on changed team and started working on DL framework.
+            content: |
+              During these nine months I had opportunity to work on developing new kernels, fixing issues with existing ones, improving performance and writing tests for framework elements.  
+                
+              Technology stack:
+              - C++
+              - Python
+              - Docker
+              - Make
+
+          - job: "Software Engineer Intern"
+            company: "Intel"
+            companyUrl: "https://www.intel.com/content/www/us/en/homepage.html"
+            date: "July 2021 - September 2021"
+            info:
+              enable: true
+              content: It was my first job as a software developer.
+            content: |
+              Together with my team we were working on full-stack web application with Vue, Flask and MongoDB. 
+              My greatest accomplishment was reduction in time complexity of an endpoint, by one order of magnitude, by carefully designing architecture, which led to substantially better responsiveness.  
+                
+              Technology stack:
+                - Python (Flask, pymongo)
+                - Javascript, Vue
+                - Docker & Docker Compose
+
+  # Education
+  education:
+    enable: true
+    # index: true
+    items:
+      - title: "Master of Science in Informatics"
+        school:
+          name: "University of Zurich"
+          url: "https://www.uzh.ch/cmsssl/en.html"
+        date: "August 2023 - June 2025"
+        # GPA: "4.45 out of 5.0"
+        content: |-
+            - Admitted to Informatics MSc Degree Program Fall 2023
+            - Major in Software Systems, minor in Data Science
+
+      - title: "Bachelor of Engineering in Informatics"
+        school:
+          name: "Gdańsk University of Technology"
+          url: "https://pg.edu.pl"
+        date: "September 2019 - February 2023"
+        GPA: "4.45 out of 5.0"
+        content: |-
+            - Scholarship due to the excellent grades after 2nd and 3rd year
+            - Member of Gradient AI community   
+            - Prepared and executed a university budget project, more information can be found **[here](https://pg.edu.pl/budzet_obywatelski/projekty-do-realizacji/edycja-2022/projekt-211-2022)**.
+            - Course Student Representative throughout the studies
+
+  # Achievements
+  achievements:
+    enable: true
+    items:
+      - title: 3rd place during BEST Career Meeting Hackathon 2022
+        content: Together with my team we won 3rd place during this contest. Tasks I was focused on involved mostly image processing.
+      - title: AI Games Hackathon 2022
+        content: Scored 4h as a team in Aircraft Trajectory Prediction Challange. Had a significant impact on team performance, by efficiently processing provided data with Python
+      # - title: Hugo Profile
+      #   content: Developed a theme and getting 1K+ downloads per month.
+      #   url: "https://github.com/gurusabarish/hugo-profile"
+
+
+  # courses
+  courses:
+    enable: true
+    items:
+      - title: "Kaggle: Machine Learning Explainability"
+        image: /images/MachineLearningExplainability.png
+      - title: "Kaggle: Intermediate Machine Learning"
+        image: /images/IntermediateMachineLearning.png
+      - title: "Kaggle: Intro to Machine Learning"
+        image: /images/IntroToMachineLearning.png
+      - title: "DataCamp: Intro to ChatGPT"
+        image: /images/IntroToChatGPT.png
+      - title: "DataCamp: Introduction to Airflow in Python"
+        image: /images/IntroToAirflow.png
+      - title: AZ-900 Microsoft Azure Fundamentals
+        image: /images/AZ900.png
+    
+  # projects
+  projects:
+    enable: true
+    items:
+      - title: Micropython in the context of microservices implementation 
+        content: Diploma project, conducted together with my colleague, in which the main goal was to highlight Artificial
+                  Intelligence applications on edge devices, ie. microcontrollers with very limited resources. Device we
+                  created was based on two ESP32 microcontrollers and MicroPython language and was able to perform
+                  image recognition using quantized CNNs together with TensorFlow Lite framework.
+        image: /images/micropython_project.jpeg
+        # featured:
+        #   name: Demo
+        #   link: https://hugo-profile.netlify.app
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/mkuczynski11/micropython-tflite
+
+
+  #Contact
+  contact:
+    enable: true
+    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    email: piotr.wolinski.2017@outlook.com
+    btnName: Mail me
+
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      github: https://github.com/PiotrWolinski
+      linkedin: https://www.linkedin.com/in/piotr-wolinski/

@@ -1,0 +1,3 @@
+[submodule "themes/hugo-profile-custom"]
+	path = themes/hugo-profile-custom
+	url = git@github.com:PiotrWolinski/hugo-profile.git
