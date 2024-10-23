@@ -1,10 +1,14 @@
-baseURL: "https://example.org"
+baseURL: "https://piotrwolinski.github.io"
 languageCode: "en-us"
 title: "Piotr Wolinski"
 theme: hugo-profile-custom
 
-Paginate: 3
 googleAnalytics: G-123456789
+
+pagination:
+  disableAliases: false
+  pagerSize: 3
+  path: page
 
 markup:
   goldmark:
@@ -31,8 +35,8 @@ Menus:
       weight: 1
 
 params:
-  title: "Personal portfolio"
-  description: Simple portfolio site to get to know Hugo SSG
+  title: "Portfolio & personal blog"
+  description: Portfolio & personal blog
   favicon: /images/favicon.png
   # staticPath: ""  # The path to serve the static files from
 
@@ -53,25 +57,9 @@ params:
   #   lineHeight: 1 # default: 1.5
   #   textAlign: right # default: left
 
-  # color preference
-  # color:
-  #   textColor:
-  #   secondaryTextColor:
-  #   backgroundColor:
-  #   secondaryBackgroundColor:
-  #   primaryColor:
-  #   secondaryColor:
-
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
-
-  # If you want to customize the menu, you can change it here
-  # navbar:
+  navbar:
+    stickyNavBar:
+      enable: true
   #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
   #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
   #   brandName: "Profile" # Brand name for the brand | default is the title variable
@@ -87,18 +75,19 @@ params:
   # Hero
   hero:
     enable: true
-    intro: "Nice to see you, my name is"
-    title: "Piotr."
+    intro: "Hey! It's great to see you, I'm"
+    title: "Piotr"
     subtitleHigher: "Software Engineer"
     subtitleLower: "" # "CS student"
     content: | 
-      Welcome to my portfolio site and please take a look around.  
-      If you want to, reach out to me via LinkedIn.
-    image: /images/linkedin-photo.jpg
+      Welcome to my personal space, please take a look around and   
+      if something (some post from my blog for instance) is of interest to you,  
+      feel free to reach out.
+    image: /images/main_profile_picture.jpg
     button:
       enable: true
       name: "Resume"
-      url: "https://orange-danielle-93.tiiny.site/"
+      url: "/cv/Piotr_Wolinski_CV.pdf"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -111,9 +100,10 @@ params:
     enable: true
     title: "About Me"
     content: |-
-      Just a young engineer passionate about new technologies and self-development, with the deep belief that through hard work, one can achieve anything. In my work, I like to pay attention to details and deliver high-quality solutions using my current knowledge, but also one acquired specifically to address given tasks.
+      Changing stuff and seeing what happens.  
+      Trying to do it fast enough to call it Machine Learning.
         
-      In my work, I love to encounter new people, as well as new opportunities to test myself, regardless of whether it comes down to solving unknown issues or delving into never-met-before technology. Moreover, I'm a lifelong learner who can effortlessly adapt to changes.
+      Software engineer with 3 years of experience and a passion for high performance and simple to use systems. Loves experimenting with new technologies and picking right tools for the given job. Still mastering trully pragmatic approach. Meanwhile working on obtaining a MSc from University of Zurich. 
     skills:
       enable: false
       title: "My technology stack:"
@@ -128,23 +118,68 @@ params:
   experience:
     enable: true
     items:
+      - company: "Sika AG"
+        positions:
+          - job: "Working Student Data Engineer"
+            company: "Sika AG"
+            companyUrl: "https://www.sika.com/"
+            date: "July 2024 - Present"
+            info:
+              enable: false
+            content: |-
+              I'm working part time as a Data/Software Engineer at Sika AG, where I'm working on multiple internal projects related to data. Additionally I'm sharing my python and SE related knowledge by leading interactive sessions with other juniors.
+
+              Skills showed:
+              - Python
+              - Git
+              - Machine Learning
+              - Algorithms
+              - Data Processing
+              - Leadership
+
+
       - company: "Verity AG"
         positions:
-          - job: "Software Engineer"
+          - job: "Working Student Software Engineer"
             company: "Verity AG"
-            companyUrl: "https://verity.net/"
+            companyUrl: "https://verity.net/" 
             date: "August 2023 - June 2024"
+            info:
+              enable: false
             content: |
-              I'm working part time as a SE at Verity, where I put my Python expertise in use.
+              I was part of the Application Operations team and my main tasks were keeping existing software and internal tools running and also improve them with new functionalities. 
+              During this time I really honed my python skills, learning from my amazing colleagues and also built some more self-confidence. I believe this really allowed me to become more aware and more pragmatic software engineer.
 
-      - company: "Deeptale AI"
+
+              My biggest achievements are:
+              - Integrated proximity based clustering into existing 3D visualization tool to improve data quality processes
+              - Developed a tool to streamline reports generation process reducing time spent on the creation part by more than 90%
+              - Accelerated internal tools with numerous features and improvements streamlining QA processes, but also increasing productivity and decreasing frustration of people using them
+              - Refactored large portion of the client facing REST API to ensure smoother development
+
+              Technical skills I showed:
+              - Python (pandas, FastAPI, pydantic, scikit-learn)
+              - Data structures, problem solving
+              - Git, Linux
+              - Code review, critical thinking
+
+              Soft skills:
+              - Work organization
+              - Time management
+              - Collaboration
+
+
+      - company: "Deeptale"
         positions:
           - job: "Junior Machine Learning Engineer"
             company: "Deeptale.ai"
             companyUrl: "https://deeptale.ai/"
             date: "February 2023 - May 2023"
+            info:
+              enable: false
             content: |
-              As a part of a development team I am mostly focused on developing microservices and APIs linking various components of Deeptale infrastructure. Also I was the main developer of the QA Platform which main goal was to enhance graphics team performance by adding user friendly interface and well-optimized REST API endpoints.
+              As a part of a development team I am mostly focused on developing microservices and APIs linking various components of Deeptale infrastructure. 
+              Also I was the main developer of the QA Platform which main goal was to enhance graphics team performance by adding user friendly interface and well-optimized REST API endpoints.
 
               Main achievements:
               - Developed QA web application that had a significant impact on the performance of the graphics team
@@ -171,6 +206,8 @@ params:
             company: "STX Next"
             companyUrl: "https://www.stxnext.com/"
             date: "July 2022 - January 2023"
+            info:
+              enable: false
             content: |
               During my time in STX I had the opportunity to work in two separate areas:
 
@@ -187,9 +224,7 @@ params:
               - Docker & Docker Compose
               - Jupyter
               
-
-
-      - company: "Intel"
+      - company: "Intel corp"
         positions:
           - job: "Deep Learning Software Engineer Intern"
             company: "Intel"
@@ -203,7 +238,9 @@ params:
               enable: true
               content: Later on changed team and started working on DL framework.
             content: |
-              During these nine months I had opportunity to work on developing new kernels, fixing issues with existing ones, improving performance and writing tests for framework elements.  
+              Contributed to open-source MXNet Deep Learning Framework, by adding new optimization features, general improvements and bug fixes. Few honorable mentions are: implemented backward adaptive pooling kernels, unified viewing of the computational graphs by including fused operators, added options for new activations functions for certain operators.
+
+              I learned a lot during this time, however I was still not sure whether such low-level approach to Machine Learning is for me. Nevertheless, it was a great experience which allowed me to taste a production-grade C++.
                 
               Technology stack:
               - C++
@@ -219,8 +256,9 @@ params:
               enable: true
               content: It was my first job as a software developer.
             content: |
-              Together with my team we were working on full-stack web application with Vue, Flask and MongoDB. 
-              My greatest accomplishment was reduction in time complexity of an endpoint, by one order of magnitude, by carefully designing architecture, which led to substantially better responsiveness.  
+              Together with my team we were working on full-stack web application with Vue, Flask and MongoDB.  
+                
+              My greatest achievement was rework of a certain data aggregating endpoint. With my implementation it was 30 times faster on average and requests were no longer timing-out.
                 
               Technology stack:
                 - Python (Flask, pymongo)
@@ -232,26 +270,32 @@ params:
     enable: true
     # index: true
     items:
-      - title: "Master of Science in Informatics"
+      - title: "MSc in Data Science"
         school:
           name: "University of Zurich"
-          url: "https://www.uzh.ch/cmsssl/en.html"
-        date: "August 2023 - June 2025"
-        # GPA: "4.45 out of 5.0"
+          url: "https://www.ifi.uzh.ch/en.html"
+        date: "August 2023 - December 2025"
+        GPA: "5.0 / 6.0"
         content: |-
-            - Admitted to Informatics MSc Degree Program Fall 2023
-            - Major in Software Systems, minor in Data Science
+          Focused on major in Data Science to combine theoretical knowledge of AI and ML with hands-on experience in software systems development. My research interest is mostly focused on Computer Vision and robotics.
 
-      - title: "Bachelor of Engineering in Informatics"
+          Relevant coursework:
+          - Deep Learning
+          - Computer Vision @ETH
+          - Vision Algortihms for Mobile Robotics
+          - Vision Based Drone Flight
+          - Reinforcement Learning
+          - Systems for Data Science
+
+      - title: "BEng in Computer Science"
         school:
           name: "Gdańsk University of Technology"
           url: "https://pg.edu.pl"
         date: "September 2019 - February 2023"
-        GPA: "4.45 out of 5.0"
+        GPA: "4.5 / 5.0"
         content: |-
             - Scholarship due to the excellent grades after 2nd and 3rd year
-            - Member of Gradient AI community   
-            - Prepared and executed a university budget project, more information can be found **[here](https://pg.edu.pl/budzet_obywatelski/projekty-do-realizacji/edycja-2022/projekt-211-2022)**.
+            - Prepared and executed a university budget project, more information can be found **[under this link](https://pg.edu.pl/budzet_obywatelski/projekty-do-realizacji/edycja-2022/projekt-211-2022)**.
             - Course Student Representative throughout the studies
 
   # Achievements
@@ -261,7 +305,7 @@ params:
       - title: 3rd place during BEST Career Meeting Hackathon 2022
         content: Together with my team we won 3rd place during this contest. Tasks I was focused on involved mostly image processing.
       - title: AI Games Hackathon 2022
-        content: Scored 4h as a team in Aircraft Trajectory Prediction Challange. Had a significant impact on team performance, by efficiently processing provided data with Python
+        content: Scored 4h as a team in Aircraft Trajectory Prediction Challange. Had a significant impact on team performance, by efficiently processing provided data with Python.
       # - title: Hugo Profile
       #   content: Developed a theme and getting 1K+ downloads per month.
       #   url: "https://github.com/gurusabarish/hugo-profile"
@@ -271,6 +315,8 @@ params:
   courses:
     enable: true
     items:
+      - title: "Fundamentals of Accelerated Computing with CUDA Python"
+        image: /images/python-cuda.png
       - title: "Kaggle: Machine Learning Explainability"
         image: /images/MachineLearningExplainability.png
       - title: "Kaggle: Intermediate Machine Learning"
@@ -288,33 +334,60 @@ params:
   projects:
     enable: true
     items:
-      - title: Micropython in the context of microservices implementation 
+      - title: MicroPython for edge AI inference
         content: Diploma project, conducted together with my colleague, in which the main goal was to highlight Artificial
                   Intelligence applications on edge devices, ie. microcontrollers with very limited resources. Device we
                   created was based on two ESP32 microcontrollers and MicroPython language and was able to perform
                   image recognition using quantized CNNs together with TensorFlow Lite framework.
         image: /images/micropython_project.jpeg
-        # featured:
-        #   name: Demo
-        #   link: https://hugo-profile.netlify.app
-        # badges:
-        #   - "Hugo"
-        #   - "Bootstrap"
-        #   - "Javascript"
+        badges:
+          - "Python"
+          - "Tensorflow Lite"
+          - "Machine Learning"
         links:
           - icon: fab fa-github
             url: https://github.com/mkuczynski11/micropython-tflite
+      - title: Fourier features for high frequency functions ‐  PyTorch implementation 
+        content: Implementation of a paper which laid the foundations for NeRFs - novel 3D reconstruction method.
+        image: /images/fourier_features.png
+        badges:
+          - "Pytorch"
+          - "Machine Learning"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/PiotrWolinski/image-regression-with-fourier-features
+      - title: Real-time drone detection
+        content: |
+          Together with my colleagues we trained a YOLOv5 model for a robust drone detection task. My contribution included proposing the real-world data annotation pipeline, implementing simulation data generator and coordinating group efforts. In the end our detector outperformed the reference model by a significant margin in robustness and accuracy.
+        image: /images/drone_detection.png
+        badges:
+          - "Python" 
+          - "Computer Vision"
+          - "Leadership"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/JorgeOrtizV/drone_tracking/blob/generate-poses/generate_poses.ipynb
+      - title: Harris corners in rust
+        content: |
+          Very verbose implementation of harris corner detector, mainly for purpose of learning rust. Work is still in progress and from time to time I will add new commits, but current implementation is already working.
+        image: /images/harris_corners_rust.png
+        badges:
+          - "Rust"
+          - "Computer Vision"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/PiotrWolinski/rust-harris-corners
 
 
   #Contact
   contact:
     enable: true
-    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    content: Something caught your attention? Write me an email and I will get back to you.
     email: piotr.wolinski.2017@outlook.com
-    btnName: Mail me
+    btnName: Email
 
   footer:
-    # recentPosts: false
+    recentPosts: true
     socialNetworks:
       github: https://github.com/PiotrWolinski
       linkedin: https://www.linkedin.com/in/piotr-wolinski/
