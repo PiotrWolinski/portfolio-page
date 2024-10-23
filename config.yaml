@@ -1,4 +1,4 @@
-baseURL: "https://piotrwolinski.github.io/portfolio-page"
+baseURL: "https://piotrwolinski.github.io/portfolio-page/"
 languageCode: "en-us"
 title: "Piotr Wolinski"
 theme: hugo-profile-custom
@@ -37,8 +37,8 @@ Menus:
 params:
   title: "Portfolio & personal blog"
   description: Portfolio & personal blog
-  favicon: /images/favicon.png
-  staticPath: "https://piotrwolinski.github.io/portfolio-page"  # The path to serve the static files from
+  favicon: /favicon.png
+  staticPath: "https://piotrwolinski.github.io/portfolio-page/"  # The path to serve the static files from
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -83,11 +83,11 @@ params:
       Welcome to my personal space, please take a look around and   
       if something (some post from my blog for instance) is of interest to you,  
       feel free to reach out.
-    image: /images/main_profile_picture.jpg
+    image: images/main_profile_picture.jpg
     button:
       enable: true
       name: "Resume"
-      url: "/cv/Piotr_Wolinski_CV.pdf"
+      url: "cv/Piotr_Wolinski_CV.pdf"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
@@ -316,19 +316,19 @@ params:
     enable: true
     items:
       - title: "Fundamentals of Accelerated Computing with CUDA Python"
-        image: /images/python-cuda.png
+        image: images/python-cuda.png
       - title: "Kaggle: Machine Learning Explainability"
-        image: /images/MachineLearningExplainability.png
+        image: images/MachineLearningExplainability.png
       - title: "Kaggle: Intermediate Machine Learning"
-        image: /images/IntermediateMachineLearning.png
+        image: images/IntermediateMachineLearning.png
       - title: "Kaggle: Intro to Machine Learning"
-        image: /images/IntroToMachineLearning.png
+        image: images/IntroToMachineLearning.png
       - title: "DataCamp: Intro to ChatGPT"
-        image: /images/IntroToChatGPT.png
+        image: images/IntroToChatGPT.png
       - title: "DataCamp: Introduction to Airflow in Python"
-        image: /images/IntroToAirflow.png
+        image: images/IntroToAirflow.png
       - title: AZ-900 Microsoft Azure Fundamentals
-        image: /images/AZ900.png
+        image: images/AZ900.png
     
   # projects
   projects:
@@ -339,7 +339,7 @@ params:
                   Intelligence applications on edge devices, ie. microcontrollers with very limited resources. Device we
                   created was based on two ESP32 microcontrollers and MicroPython language and was able to perform
                   image recognition using quantized CNNs together with TensorFlow Lite framework.
-        image: /images/micropython_project.jpeg
+        image: images/micropython_project.jpeg
         badges:
           - "Python"
           - "Tensorflow Lite"
@@ -349,7 +349,7 @@ params:
             url: https://github.com/mkuczynski11/micropython-tflite
       - title: Fourier features for high frequency functions ‐  PyTorch implementation 
         content: Implementation of a paper which laid the foundations for NeRFs - novel 3D reconstruction method.
-        image: /images/fourier_features.png
+        image: images/fourier_features.png
         badges:
           - "Pytorch"
           - "Machine Learning"
@@ -359,7 +359,7 @@ params:
       - title: Real-time drone detection
         content: |
           Together with my colleagues we trained a YOLOv5 model for a robust drone detection task. My contribution included proposing the real-world data annotation pipeline, implementing simulation data generator and coordinating group efforts. In the end our detector outperformed the reference model by a significant margin in robustness and accuracy.
-        image: /images/drone_detection.png
+        image: images/drone_detection.png
         badges:
           - "Python" 
           - "Computer Vision"
@@ -370,7 +370,7 @@ params:
       - title: Harris corners in rust
         content: |
           Very verbose implementation of harris corner detector, mainly for purpose of learning rust. Work is still in progress and from time to time I will add new commits, but current implementation is already working.
-        image: /images/harris_corners_rust.png
+        image: images/harris_corners_rust.png
         badges:
           - "Rust"
           - "Computer Vision"
