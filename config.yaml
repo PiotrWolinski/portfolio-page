@@ -1,4 +1,4 @@
-baseURL: "https://piotrwolinski.github.io/portfolio-page/"
+baseURL: "https://piotrwolinski.github.io/portfolio-page"
 languageCode: "en-us"
 title: "Piotr Wolinski"
 theme: hugo-profile-custom
@@ -38,7 +38,7 @@ params:
   title: "Portfolio & personal blog"
   description: Portfolio & personal blog
   favicon: images/favicon.png
-  staticPath: "https://piotrwolinski.github.io/portfolio-page/"  # The path to serve the static files from
+  staticPath: "https://piotrwolinski.github.io/portfolio-page"  # The path to serve the static files from
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -80,9 +80,7 @@ params:
     subtitleHigher: "Software Engineer"
     subtitleLower: "" # "CS student"
     content: | 
-      Welcome to my personal space, please take a look around and   
-      if something (some post from my blog for instance) is of interest to you,  
-      feel free to reach out.
+      Welcome to my personal space, please take a look around and if something (some post from my blog for instance) is of interest to you, feel free to reach out.
     image: images/main_profile_picture.jpg
     button:
       enable: true
