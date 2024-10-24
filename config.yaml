@@ -37,7 +37,7 @@ Menus:
 params:
   title: "Portfolio & personal blog"
   description: Portfolio & personal blog
-  favicon: /favicon.png
+  favicon: images/favicon.png
   staticPath: "https://piotrwolinski.github.io/portfolio-page/"  # The path to serve the static files from
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
@@ -103,7 +103,7 @@ params:
       Changing stuff and seeing what happens.  
       Trying to do it fast enough to call it Machine Learning.
         
-      Software engineer with 3 years of experience and a passion for high performance and simple to use systems. Loves experimenting with new technologies and picking right tools for the given job. Still mastering trully pragmatic approach. Meanwhile working on obtaining a MSc from University of Zurich. 
+      Software engineer with 3 years of experience and a passion for high performance and simple to use systems. Loves experimenting with new technologies and picking right tools for the given job. Still mastering truly pragmatic approach. Meanwhile working on obtaining a MSc from University of Zurich. 
     skills:
       enable: false
       title: "My technology stack:"
